@@ -1,0 +1,39 @@
+
+
+[
+    {
+        "title":"25 YEARS OF EXPERINCE",
+        "desc":"We have 25 years of woodcraft experience right to your residential, office, restaurants hospital and etc…",
+        "icon":"./icon/icon-1.png"
+    },
+    {
+        "title":"CREATIVE DESIGNERS",
+        "desc":"Our designing team designs with your taste, space, and budget, Also our team will guide you to choose ...",
+        "icon":"./icon/icon-2.png"
+    },
+    {
+        "title":"QUALITY PRODUCTS",
+        "desc":"We provide high quality products only to our customers, our prodcuts are certified with WI organization usa.",
+        "icon":"./icon/icon-3.png"
+
+    },
+    {
+        "title":"AWARDS WINNING TEAM",
+        "desc":"In 1984 we have won the best resedential carpenter awrard from worlds carpernter organization in usa.",
+        "icon":"./icon/icon-4.jpg"
+    },
+    {
+        "title":"FREE CONSULTATION",
+        "desc":"We provide free consultation about designs, quality, space, budget and etc you can get it all of them ...",
+        "icon":"./icon/icon-5.png"
+
+    },
+    {
+        "title":"24/7 CUSTOMER SUPPORT",
+        "desc":"Whenever & wherever you need our support you can contact ourcustomer support team by 24/7, they will guide ...",
+        "icon":"./icon/icon-6.png"
+
+    }
+   
+   
+]
