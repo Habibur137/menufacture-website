@@ -21,7 +21,7 @@ const ManageOrders = () => {
   }
   console.log(products?.data);
   return (
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto gr">
       <table class="table w-5/6 mx-auto mt-8">
         {/* <!-- head --> */}
         <thead>

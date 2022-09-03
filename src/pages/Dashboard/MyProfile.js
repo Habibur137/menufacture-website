@@ -68,7 +68,7 @@ const MyProfile = () => {
     e.target.reset();
   };
   return (
-    <div>
+    <div className="gr">
       <h1 className="text-success font-bold">
         <span className="text-slate-500">Name:</span> {user?.displayName}
       </h1>

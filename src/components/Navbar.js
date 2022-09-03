@@ -16,7 +16,7 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, type: "spring", stiffness: 150 }}
-      className="navbar bg-base-100"
+      className="navbar nav"
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -49,7 +49,7 @@ const Navbar = () => {
             </li>
             {user ? (
               <>
-                <li>
+                <li className="px-4 py-1">
                   <NavLink to="/dashboard">Dashboard</NavLink>
                 </li>
                 <button onClick={logOut}>Log Out</button>
@@ -83,7 +83,9 @@ const Navbar = () => {
           {user ? (
             <>
               <li>
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink className="pad" to="/dashboard">
+                  Dashboard
+                </NavLink>
               </li>
               <button onClick={logOut}>Log Out</button>
             </>

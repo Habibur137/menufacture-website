@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="px-8 lg:p-16 bg-accent mt-12">
+    <div className="px-8 lg:p-16 bg-accent mt-12 about">
       <h3 className="text-slate-900 text-4xl font-bold">ABOUT CARPENTO</h3>
       <div className="h-px  border-b-2 w-28 mt-2 border-amber-500 mb-12"></div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

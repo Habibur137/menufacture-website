@@ -26,7 +26,7 @@ const AddReview = () => {
     reset();
   };
   return (
-    <div className="mx-auto mt-6 bg-accent p-6 w-[500px] ">
+    <div className="mx-auto mt-6 bg-accent p-6 w-[500px] gr">
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* ratings field ========================================================== */}
         <div class="form-control w-full ">
