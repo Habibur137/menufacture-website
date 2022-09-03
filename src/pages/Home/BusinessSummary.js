@@ -15,7 +15,7 @@ const BusinessSummary = () => {
   }
   console.log(data);
   return (
-    <div className="my-12 px-8 lg:px-16">
+    <div className="my-12 px-8 lg:px-16 summary">
       <h3 className="text-slate-900 text-4xl font-bold text-center">
         WHY CHOOSE US?
       </h3>

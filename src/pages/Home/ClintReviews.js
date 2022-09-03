@@ -15,7 +15,7 @@ const ClintReviews = () => {
     return <Loading />;
   }
   return (
-    <div className="my-12 px-8 lg:px-16 mb-20">
+    <div className="my-12 px-8 lg:px-16 mb-20 gr lg:py-8">
       <div className="flex justify-between">
         <div>
           <h3 className="text-primary">Testimonial</h3>
@@ -27,7 +27,7 @@ const ClintReviews = () => {
         </div>
         <img className="w-24 lg:w-48 h-20 lg:h-44" src={qoute} alt="" />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {data?.map((review, index) => (
           <SingleReview review={review} key={index} />
         ))}

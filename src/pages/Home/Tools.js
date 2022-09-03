@@ -13,7 +13,7 @@ const Tools = () => {
     return <Loading />;
   }
   return (
-    <div className="mt-24">
+    <div className="mt-24 lg:px-20">
       <h4 className="text-center text-slate-500 mb-2">WOODWORKING TOOLS</h4>
       <h1 className="text-center text-4xl font-semibold mb-12">
         Featured Products

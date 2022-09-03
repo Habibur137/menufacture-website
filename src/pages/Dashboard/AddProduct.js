@@ -54,12 +54,12 @@ const AddProduct = () => {
     // console.log(data);
   };
   return (
-    <div className="mx-auto mt-6 bg-accent p-6 w-[500px] gr">
+    <div className="mx-auto mt-6 bg-accent p-6 w-[500px] add">
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* ratings field ========================================================== */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Product Name</span>
+            <span class="label-text text-white">Product Name</span>
           </label>
           <input
             {...register("name", {
@@ -83,7 +83,7 @@ const AddProduct = () => {
         {/* price field =============================================================== */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Price</span>
+            <span class="label-text text-white">Price</span>
           </label>
           <input
             {...register("price", {
@@ -107,7 +107,7 @@ const AddProduct = () => {
         {/* quantity field ================================================== */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Available Quantity</span>
+            <span class="label-text text-white">Available Quantity</span>
           </label>
           <input
             {...register("quantity", {
@@ -117,7 +117,7 @@ const AddProduct = () => {
               },
             })}
             type="number"
-            placeholder="Add Price"
+            placeholder="Add Stocks"
             class="input input-bordered w-full py-1"
           />
           <label class="label">
@@ -131,7 +131,7 @@ const AddProduct = () => {
         {/* minimum quantity ============================================ */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Minimum Quantity</span>
+            <span class="label-text text-white">Minimum Quantity</span>
           </label>
           <input
             {...register("minQuantity", {
@@ -155,7 +155,7 @@ const AddProduct = () => {
         {/* desc field ================================================== */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Description</span>
+            <span class="label-text text-white">Description</span>
           </label>
           <textarea
             {...register("desc", {
@@ -179,7 +179,7 @@ const AddProduct = () => {
         {/* img field ====================================================== */}
         <div class="form-control w-full ">
           <label class="label">
-            <span class="label-text">Quantity</span>
+            <span class="label-text text-white">Quantity</span>
           </label>
           <input
             {...register("image", {
@@ -189,7 +189,7 @@ const AddProduct = () => {
               },
             })}
             type="file"
-            placeholder="Add Price"
+            placeholder="Add Stocks"
             class="input input-bordered w-full py-1"
           />
           <label class="label">
@@ -201,7 +201,7 @@ const AddProduct = () => {
           </label>
         </div>
         <input
-          class="btn btn-primary w-1/3 rounded-none mt-4 mx-auto block text-white hover:bg-white hover:text-primary capitalize font-bold hover:border-2"
+          class="btn btn-primary bg-[#977ac3] w-1/3 rounded-none mt-4 mx-auto block text-white hover:bg-white hover:text-primary capitalize font-bold hover:border-2"
           type="submit"
           value="Add Product"
         />

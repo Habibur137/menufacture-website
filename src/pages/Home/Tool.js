@@ -8,9 +8,9 @@ const Tool = ({ ...tool }) => {
   const { name, price, image, _id } = tool;
   return (
     <motion.div
-      whileHover={{
-        boxShadow: "0px 0px 5px rgb(0, 0, 0)",
-      }}
+      // whileHover={{
+      //   boxShadow: "0px 0px 5px rgb(0, 0, 0)",
+      // }}
       class="group card card-compact relative max-w-lg bg-base-100 transition-all duration-200"
     >
       <div className="bg-[rgba(255,255,255,0.59)] transition-all duration-500 w-full h-full absolute top-0 hidden group-hover:block">
@@ -30,7 +30,7 @@ const Tool = ({ ...tool }) => {
           <motion.div>
             <Link
               to={`/detail/${_id}`}
-              className="btn btn-primary  btn-lg mb-5 capitalize hover:bg-white hover:text-primary hover:border-2 rounded-none  text-white"
+              className="btn btn-primary   mb-5 capitalize hover:bg-white hover:text-primary hover:border-2 rounded-none  text-white"
             >
               Product Detail
             </Link>
