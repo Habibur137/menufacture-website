@@ -21,7 +21,7 @@ const ClintReviews = () => {
           <h3 className="text-primary">Testimonial</h3>
 
           <h3 className="text-slate-900 text-4xl font-bold">
-            WHAT OUR CLINTS SAY
+            WHAT OUR CLIENTS SAY
           </h3>
           <div className="h-px  border-b-2 w-24 border-amber-500 mt-3 mb-12"></div>
         </div>

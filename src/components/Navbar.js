@@ -3,6 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import auth from "../firebase.init";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -11,7 +12,12 @@ const Navbar = () => {
     signOut(auth);
   };
   return (
-    <div className="navbar bg-base-100">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, type: "spring", stiffness: 150 }}
+      className="navbar bg-base-100"
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -88,7 +94,7 @@ const Navbar = () => {
           )}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

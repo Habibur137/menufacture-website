@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/image8-2.png";
 import Loading from "../components/Loading";
+import { motion } from "framer-motion";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -44,7 +45,12 @@ const Login = () => {
     console.log(data);
   };
   return (
-    <div className="mt-2">
+    <motion.div
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0.3, type: "spring", stiffness: 110 }}
+      className="mt-2"
+    >
       <div
         className="text-center py-16 bg-cover bg-center"
         style={{ background: `url(${bg})` }}
@@ -147,7 +153,7 @@ const Login = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

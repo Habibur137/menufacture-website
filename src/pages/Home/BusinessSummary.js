@@ -5,7 +5,6 @@ import SingleSummary from "./SingleSummary";
 import { BiCalendarCheck, BiHeartCircle } from "react-icons/bi";
 import { FaHandshakeAltSlash } from "react-icons/fa";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { AiFillProject } from "react-icons/ai";
 
 const BusinessSummary = () => {
   const { data, isLoading } = useQuery("summary", () =>
@@ -18,7 +17,7 @@ const BusinessSummary = () => {
   return (
     <div className="my-12 px-8 lg:px-16">
       <h3 className="text-slate-900 text-4xl font-bold text-center">
-        WHY CHOSE US?
+        WHY CHOOSE US?
       </h3>
       <div className="h-px  border-b-2 w-24 border-amber-500 mt-3 mb-12 mx-auto"></div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

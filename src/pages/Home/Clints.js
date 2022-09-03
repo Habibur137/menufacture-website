@@ -8,7 +8,7 @@ import e from "../../assets/partner/5.webp";
 const Clints = () => {
   return (
     <div className="my-12 px-8 lg:px-16">
-      <h3 className="text-slate-900 text-4xl font-bold">OUR CLINTS</h3>
+      <h3 className="text-slate-900 text-4xl font-bold">OUR CLIENTS</h3>
       <div className="h-px  border-b-2 w-16 border-amber-500 mt-3 mb-12"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5">

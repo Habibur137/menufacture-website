@@ -1,5 +1,6 @@
 import React from "react";
 import { BiPhoneCall } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -37,7 +38,12 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="border-4 border-amber-500">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+          className="border-4 border-amber-500"
+        >
           <iframe
             className="w-full h-full"
             src="https://www.youtube.com/embed/KeV1r4wQeQA"
@@ -46,7 +52,7 @@ const About = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
