@@ -4,13 +4,33 @@ import { GiSelfLove } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const imageAnimate = {
+  offScreen: {
+    x: 100,
+  },
+  onScreen: {
+    x: 0,
+    rotate: [0, 45, 90, 45],
+    transition: { type: "spring", bounce: 0.3, duration: 3 },
+  },
+};
+const textAnimate = {
+  offScreen: {
+    y: 100,
+  },
+  onScreen: {
+    y: 0,
+    transition: { type: "spring", bounce: 0.3, duration: 3 },
+  },
+};
 const Tool = ({ ...tool }) => {
   const { name, price, image, _id } = tool;
   return (
     <motion.div
-      // whileHover={{
-      //   boxShadow: "0px 0px 5px rgb(0, 0, 0)",
-      // }}
+      transition={{ staggerChildren: 0.5 }}
+      initial="offScreen"
+      whileInView="onScreen"
+      viewport={{ once: false, amount: 0.8 }}
       class="group card card-compact relative max-w-lg bg-base-100 transition-all duration-200"
     >
       <div className="bg-[rgba(255,255,255,0.59)] transition-all duration-500 w-full h-full absolute top-0 hidden group-hover:block">
@@ -37,12 +57,32 @@ const Tool = ({ ...tool }) => {
           </motion.div>
         </div>
       </div>
-      <figure>
-        <img src={image} alt="Shoes" />
+      <figure className="overflow-hidden">
+        <motion.img
+          variants={imageAnimate}
+          // initial="offScreen"
+          // animate="onScreen"
+          src={image}
+          alt="Shoes"
+        />
       </figure>
       <div className="card-body">
-        <h2 className="card-title  justify-center">{name}</h2>
-        <p className="text-center">Tk {price}</p>
+        <motion.h2
+          variants={textAnimate}
+          // initial="offScreen"
+          // animate="onScreen"
+          className="card-title  justify-center"
+        >
+          {name}
+        </motion.h2>
+        <motion.p
+          variants={textAnimate}
+          // initial="offScreen"
+          // animate="onScreen"
+          className="text-center"
+        >
+          Tk {price}
+        </motion.p>
         {/* btn here */}
       </div>
     </motion.div>

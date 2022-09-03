@@ -12,7 +12,7 @@ const Banner = () => {
         <div>
           <motion.h1
             initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             {" "}
@@ -20,7 +20,7 @@ const Banner = () => {
           </motion.h1>
           <motion.h2
             initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2 }}
             className="text-5xl text-primary text-[900] mt-4"
           >
@@ -28,7 +28,7 @@ const Banner = () => {
           </motion.h2>
           <motion.p
             initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.4 }}
             className=" mt-4 text-xl"
           >
@@ -37,7 +37,7 @@ const Banner = () => {
           </motion.p>
           <motion.p
             initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.6 }}
             className=" mt-1 text-xl"
           >
@@ -46,7 +46,7 @@ const Banner = () => {
           </motion.p>
           <motion.button
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1.8 }}
             whileHover={{
               textShadow: "0px 0px 5px rgb(255, 255, 255)",

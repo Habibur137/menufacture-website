@@ -5,7 +5,19 @@ import SingleSummary from "./SingleSummary";
 import { BiCalendarCheck, BiHeartCircle } from "react-icons/bi";
 import { FaHandshakeAltSlash } from "react-icons/fa";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
+const cartAnimated = {
+  offScreen: {
+    x: -100,
+    opacity: 0,
+  },
+  onScreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.5, duration: 3 },
+  },
+};
 const BusinessSummary = () => {
   const { data, isLoading } = useQuery("summary", () =>
     fetch(`expo.json`).then((res) => res.json())
@@ -26,8 +38,13 @@ const BusinessSummary = () => {
         ))}
       </div>
 
-      <div className="lg:mt-24 grid grid-cols-1 lg:grid-cols-4 ">
-        <div className="flex gap-3">
+      <motion.div
+        transition={{ stagglerChildren: 0.5 }}
+        initial="offScreen"
+        whileInView="onScreen"
+        className="lg:mt-24 grid grid-cols-1 lg:grid-cols-4 "
+      >
+        <motion.div variants={cartAnimated} className="flex gap-3">
           <BiCalendarCheck className="w-16 h-16 text-success" />
           <div>
             <p className="text-5xl font-bold">25+</p>
@@ -35,15 +52,15 @@ const BusinessSummary = () => {
               Years of Experience
             </p>
           </div>
-        </div>
-        <div className="flex gap-3">
+        </motion.div>
+        <motion.div variants={cartAnimated} className="flex gap-3">
           <BiHeartCircle className="w-16 h-16 text-success" />
           <div>
             <p className="text-5xl font-bold">450+</p>
             <p className="text-slate-300 font-semibold mt-1">Happy Clients</p>
           </div>
-        </div>
-        <div className="flex gap-3">
+        </motion.div>
+        <motion.div variants={cartAnimated} className="flex gap-3">
           <FaHandshakeAltSlash className="w-16 h-16 text-success" />
           <div>
             <p className="text-5xl font-bold">50+</p>
@@ -52,16 +69,16 @@ const BusinessSummary = () => {
               Business Partners
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-3">
+        <motion.div variants={cartAnimated} className="flex gap-3">
           <RiMoneyDollarCircleLine className="w-16 h-16 text-success" />
           <div>
             <p className="text-5xl font-bold">1000K</p>
             <p className="text-slate-300 font-semibold mt-1">Annual Revenue</p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

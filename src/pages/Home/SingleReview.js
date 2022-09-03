@@ -1,9 +1,25 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+const summaryAnimated = {
+  offScreen: {
+    y: -100,
+    opacity: 0,
+  },
+  onScreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.5, duration: 3 },
+  },
+};
 const SingleReview = ({ review }) => {
   const { rating, comment } = review;
   return (
-    <div className="card w-auto bg-base-100 shadow-2xl summary">
+    <motion.div
+      variants={summaryAnimated}
+      initial="offScreen"
+      whileInView="onScreen"
+      className="card w-auto bg-base-100 shadow-2xl summary"
+    >
       <div className="card-body">
         <p>{comment}</p>
         <p>Rating: {rating}</p>
@@ -19,7 +35,7 @@ const SingleReview = ({ review }) => {
           <p>California</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

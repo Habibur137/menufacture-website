@@ -6,6 +6,7 @@ import Loading from "../../components/Loading";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const ProductDetail = () => {
   const [user, loading] = useAuthState(auth);
@@ -96,8 +97,12 @@ const ProductDetail = () => {
 
   // console.log(quantity)
   return (
-    <div>
-      <div class="hero min-h-[70vh]  bg-base-100">
+    <motion.div
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0.3, type: "spring", stiffness: 110 }}
+    >
+      <div class="hero min-h-[70vh]  gr">
         <div class="hero-content items-center flex-col lg:flex-row">
           <img
             className="w-1/2 h-[70vh]"
@@ -179,7 +184,7 @@ const ProductDetail = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

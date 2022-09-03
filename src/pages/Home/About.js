@@ -40,7 +40,7 @@ const About = () => {
         </div>
         <motion.div
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          whileInView={{ scale: 1 }}
           transition={{ duration: 1 }}
           className="border-4 border-amber-500"
         >

@@ -257,7 +257,7 @@
       transparent 76%,
       transparent 100%
     ),
-    linear-gradient(45deg, rgb(120, 125, 226), rgb(151, 122, 195));
+    linear-gradient(45deg, rgb(120, 125, 226), #977ac3);
 }
 
 .about {
